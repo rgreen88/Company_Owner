@@ -42,8 +42,7 @@ public class Contact implements Parcelable
             return (new Contact[size]);
         }
 
-    }
-    ;
+    };
 
     private Contact(Parcel in) {
         this.companyName = ((String) in.readValue((String.class.getClassLoader())));
@@ -61,6 +60,8 @@ public class Contact implements Parcelable
     public Contact() {
     }
 
+
+    //Javadoc required
     /**
      * @param companyName
      * @param parent
