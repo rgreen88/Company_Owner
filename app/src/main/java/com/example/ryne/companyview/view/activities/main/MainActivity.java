@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
     RecyclerView.ItemAnimator itemAnimator;
     RecyclerView.LayoutManager manager;
     private List<Contact> contactList = new ArrayList<>();
-    private MainAdapter mainAdapter;
 
     String companyName, owner;
 
@@ -77,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
         itemAnimator = new DefaultItemAnimator();
         contactList.clear();
 
-//        new contact object pulling data to display company info
+//      new contact object pulling data to display company info
         Contact contact = new Contact(
                 information.getCompanyName(),
                 information.getParent(),
@@ -89,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
         contactList.addAll(Collections.singleton(information));
 
         //setting adapter
-        mainAdapter = new MainAdapter(Collections.singletonList(contact));
+        MainAdapter mainAdapter = new MainAdapter(Collections.singletonList(contact));
         contactView.setAdapter(mainAdapter);
         contactView.setLayoutManager(manager);
         contactView.setItemAnimator(itemAnimator);
@@ -113,16 +112,14 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
 
         //conditional statement to check lat/lng values and calls to search for weather info
         // by input lat/lng and converts input to string. Adds error toasts for specific errors
-        if (!etCompanyName.getText().toString().equals("") && !etOwner.getText().toString().equals("")) {
+        if (etCompanyName.getText().toString().equals("") && etOwner.getText().toString().equals("")) {
             String company = etCompanyName.getText().toString();
             String owner = etOwner.getText().toString();
             if (company.equals("") || owner.equals("") )
             {
                 showError("Company and owner needs to be filled");
             }
-            else if (companyName.equals("") ||  owner.equals("") ){
-                showError("Company and owner needs to be filled");
-            } else {
+            else {
                 presenter.getContact(companyName, owner);
             }
 

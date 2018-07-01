@@ -9,8 +9,7 @@ import retrofit2.http.Path;
 
 //making call to retrieve information on Contacts model
 public interface APIService {
-    @GET("companyName")
-    Call<Contact> contactCall(@Path("key") String key, @Path("companyName") String company,
+    @GET("bins/jz6bp")
+    Call<Contact> contactCall(@Path("phones") String key, @Path("companyName") String company,
                               @Path("managers") String owner);
-
 }

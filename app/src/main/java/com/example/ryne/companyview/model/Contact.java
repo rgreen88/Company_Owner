@@ -1,4 +1,3 @@
-
 package com.example.ryne.companyview.model;
 
 import java.util.List;
@@ -63,7 +62,7 @@ public class Contact implements Parcelable
     }
 
     /**
-     *  @param companyName
+     * @param companyName
      * @param parent
      * @param managers
      * @param phones
