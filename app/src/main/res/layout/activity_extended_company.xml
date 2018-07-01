@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ryne.companyview.view.activities.extended.ExtendedCompany">
+
+    <TextView
+        android:id="@+id/tv_company_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/company"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        android:layout_margin="8dp"/>
+
+    <TextView
+        android:id="@+id/tv_parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/parent"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        android:layout_margin="8dp"/>
+
+    <TextView
+        android:id="@+id/tv_manager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/manager"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        android:layout_margin="8dp"/>
+
+    <TextView
+        android:id="@+id/tv_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/phone"
+        android:textAlignment="center"
+        android:textSize="12sp"
+        android:layout_margin="8dp"/>
+
+    <TextView
+        android:id="@+id/tv_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="@string/address"
+        android:textAlignment="center"
+        android:textSize="12sp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="goBack"
+        android:text="@string/go_back" />
+</LinearLayout>

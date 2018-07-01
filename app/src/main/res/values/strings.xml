@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">CompanyView</string>
+    <string name="company_name">Company Name</string>
+    <string name="refresh">refresh</string>
+    <string name="search">search</string>
+    <string name="micky_mouse_productions">Micky Mouse Productions</string>
+    <string name="name">Company name:</string>
+    <string name="owner">Owner</string>
+    <string name="go_back">Go Back</string>
+    <string name="company">Company</string>
+    <string name="parent">Parent</string>
+    <string name="manager">Manager</string>
+    <string name="phone">Phone</string>
+    <string name="address">Address</string>
+</resources>
