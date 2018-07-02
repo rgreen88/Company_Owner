@@ -44,12 +44,12 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //BaseView initializing dagger2
         setupDagger();
 
         //populate view
         presenter.addView(this);
         contactView = findViewById(R.id.rv_company_name);
-
         presenter.getContact(companyName, owner);
 
         //bind et
@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
         contactList.add(contact);
         contactList.addAll(Collections.singleton(information));
 
-        //setting adapter
+        //setting adapter to populate info through singleton
         MainAdapter mainAdapter = new MainAdapter(Collections.singletonList(contact));
         contactView.setAdapter(mainAdapter);
         contactView.setLayoutManager(manager);
@@ -110,19 +110,24 @@ public class MainActivity extends AppCompatActivity implements MainContract.View
 
     public void get_company_name(View view) {
 
-        //conditional statement to check lat/lng values and calls to search for weather info
-        // by input lat/lng and converts input to string. Adds error toasts for specific errors
-        if (etCompanyName.getText().toString().equals("") && etOwner.getText().toString().equals("")) {
+        //conditional statement to check company/owner values and calls to search for contact info
+        //by input and converts input to string. Adds error toasts for specific errors
+        if (etCompanyName.getText().toString().equals("") || etOwner.getText().toString().equals("")) {
             String company = etCompanyName.getText().toString();
             String owner = etOwner.getText().toString();
-            if (company.equals("") || owner.equals("") )
+            if (company.equals(""))
             {
                 showError("Company and owner needs to be filled");
             }
-            else {
+
+            else if (owner.equals(""))
+            {
+                showError("Company and owner needs to be filled");
+            }
+            else
+            {
                 presenter.getContact(companyName, owner);
             }
-
         }
     }
 }

@@ -61,7 +61,7 @@ public class Contact implements Parcelable
     }
 
 
-    //Javadoc required
+    //Javadoc required?
     /**
      * @param companyName
      * @param parent

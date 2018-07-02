@@ -37,7 +37,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
 
         String company = "Company Name: " + contact.getCompanyName();
         String owner = "Owner: " + contact.getParent();
-//        String phoneNumber = "Phone Number: " + contact.getPhones();
+//        String phoneNumber = "Phone Number: " + contact.getPhones(); TODO:returns null due to query and onClick crashes due to null from query issue
 //        String manager = "Manager: " + contact.getManagers();
 //        String address = "Address: " + contact.getAddresses();
 
@@ -74,9 +74,6 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
 
         public ViewHolder(final View itemView) {
             super(itemView);
-
-            //TODO: create text views of company info to be displayed after search displlays results
-            //TODO: Company names in rv and click to next activity to display info in extended**
             company = itemView.findViewById(R.id.tv_company_name);
             owner = itemView.findViewById(R.id.tv_owner);
             phone = itemView.findViewById(R.id.tv_phone);

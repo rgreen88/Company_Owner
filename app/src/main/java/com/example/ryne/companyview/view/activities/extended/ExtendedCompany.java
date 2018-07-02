@@ -29,19 +29,19 @@ public class ExtendedCompany extends AppCompatActivity {
 
         //calling to set text views in new activity
         Gson gson = new Gson();
-        contact = gson.fromJson(getIntent().getStringExtra("company"), Contact.class);
-        String company = "Company name: " + contact.getCompanyName();
+        contact = gson.fromJson(getIntent().getStringExtra("companyName"), Contact.class);
+        String company = "Company name: " + contact.getCompanyName(); //TODO: null causes new activity from onclick event to crash
         String parent = "Parent company: " + contact.getParent();
-        String manager = "Managers: " + contact.getManagers();
-        String phone = "Phone: " + contact.getPhones();
-        String address = "Address: " + contact.getAddresses();
+//        String manager = "Managers: " + contact.getManagers();
+//        String phone = "Phone: " + contact.getPhones();
+//        String address = "Address: " + contact.getAddresses();
 
         //set textviews
         companyName.setText(company);
         parentCompany.setText(parent);
-        managers.setText(manager);
-        phoneNumber.setText(phone);
-        companyAddress.setText(address);
+//        managers.setText(manager);
+//        phoneNumber.setText(phone);
+//        companyAddress.setText(address);
 
     }
 
