@@ -37,15 +37,15 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
 
         String company = "Company Name: " + contact.getCompanyName();
         String owner = "Owner: " + contact.getParent();
-        String phoneNumber = "Phone Number: " + contact.getPhones();
-        String manager = "Manager: " + contact.getManagers();
-        String address = "Address: " + contact.getAddresses();
+//        String phoneNumber = "Phone Number: " + contact.getPhones();
+//        String manager = "Manager: " + contact.getManagers();
+//        String address = "Address: " + contact.getAddresses();
 
         holder.company.setText(company);
         holder.owner.setText(owner);
-        holder.phone.setText(phoneNumber);
-        holder.manager.setText(manager);
-        holder.address.setText(address);
+//        holder.phone.setText(phoneNumber);
+//        holder.manager.setText(manager);
+//        holder.address.setText(address);
 
         //onClick for Recycler View
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -53,7 +53,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
             public void onClick(View v) {
                 Intent intent = new Intent(holder.itemView.getContext(), ExtendedCompany.class);
                 Gson gson = new Gson(); //converting gson object to string
-                intent.putExtra("weather", gson.toJson(contactList));
+                intent.putExtra("company", gson.toJson(contactList));
                 holder.itemView.getContext().startActivity(intent);
             }
         });

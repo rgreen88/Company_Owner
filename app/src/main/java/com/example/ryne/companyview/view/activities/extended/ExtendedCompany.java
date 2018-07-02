@@ -29,7 +29,7 @@ public class ExtendedCompany extends AppCompatActivity {
 
         //calling to set text views in new activity
         Gson gson = new Gson();
-        contact = gson.fromJson(getIntent().getStringExtra("weather"), Contact.class);
+        contact = gson.fromJson(getIntent().getStringExtra("company"), Contact.class);
         String company = "Company name: " + contact.getCompanyName();
         String parent = "Parent company: " + contact.getParent();
         String manager = "Managers: " + contact.getManagers();
